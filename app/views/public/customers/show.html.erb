@@ -1,0 +1,63 @@
+<h1>マイページ</h1>
+
+<strong>登録情報</strong>
+<%= link_to "編集する", edit_public_customer_path(current_customer.id), method: :get, class: 'btn btn-sm btn-success' %>
+
+<table>
+  <tbody>
+      <tr>
+        <td>
+          氏名
+        </td>
+        <td>
+          <%= current_customer.last_name %> <%= current_customer.first_name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          カナ
+        </td>
+        <td>
+          <%= current_customer.last_name_kana %> <%= current_customer.first_name_kana %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          郵便番号
+        </td>
+        <td>
+          <%= current_customer.postal_code %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          住所
+        </td>
+        <td>
+          <%= current_customer.address %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          電話番号
+        </td>
+        <td>
+          <%= current_customer.telephone_number %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          メールアドレス
+        </td>
+        <td>
+          <%= current_customer.email %>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+<strong>配送先</strong>
+<%= link_to "一覧を見る", public_addresses_path, method: :get, class: 'btn btn-sm btn-success' %><br>
+
+<strong>注文履歴</strong>
+<%= link_to "一覧を見る", public_orders_path, method: :get, class: 'btn btn-sm btn-success' %>
