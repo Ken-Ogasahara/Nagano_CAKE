@@ -6,7 +6,7 @@ class Public::SessionsController < Devise::SessionsController
 
   def after_sign_out_path_for(resource)
     flash[:notice] = "ログアウトしました。"
-    new_customer_session_path
+    public_root_path
   end
 
   protected

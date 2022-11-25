@@ -1,8 +1,12 @@
-<h1>商品詳細</h1>
+<div class="col-md-10 offset-md-4">
+  <h1>商品詳細</h1>
+</div>
 
-<%= image_tag @item.get_image(200,200) %>
+<div class="col-md-8 offset-md-5">
+  <%= image_tag @item.get_image(200,200) %>
+</div>
 
-<table>
+<table class="col-md-3 offset-md-4">
 
   <tr>
     <td>商品名</td>
@@ -35,6 +39,7 @@
 
 </table>
 
-<%= link_to "編集する", edit_admin_item_path(@item.id), method: :get, class: 'btn btn-sm btn-success' %>
-
+<div class="col-md-3 offset-md-7">
+ <%= link_to "編集する", edit_admin_item_path(@item.id), method: :get, class: 'btn btn-sm btn-success' %>
+</div>
 

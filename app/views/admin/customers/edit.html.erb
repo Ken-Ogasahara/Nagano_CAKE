@@ -9,10 +9,12 @@
   </div>
 <% end %>
 
-<h1><%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集</h1>
+<div class="col-md-8 offset-md-3">
+  <h1><%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集</h1>
+</div>
 
 <%= form_with model: @customer, url: admin_customer_path, method: :patch do |f| %>
-  <table>
+  <table class="col-md-5 offset-md-3">
 
     <tr>
       <td>会員ID</td>
@@ -67,7 +69,7 @@
 
   </table>
 
-  <div class="form-group">
+  <div class="col-md-3 offset-md-7">
     <%= f.submit "変更を保存", class: "btn btn-success" %>
   </div>
 

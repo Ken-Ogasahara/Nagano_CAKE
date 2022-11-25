@@ -11,22 +11,22 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
+  <body  class="d-flex flex-column vh-100">
+    <header class="shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <!--<a class="navbar-brand" href="/">-->
-          <!--  <span>Bookers</span>-->
-          <!--</a>-->
-          <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
-          <!--  <span class="navbar-toggler-icon"></span>-->
-          <!--</button>-->
+          <a class="navbar-brand" href="/">
+            <span>ながのCAKE</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <% if admin_signed_in? %>
                 <li>
                   <%= link_to admin_items_path, method: :get, class: "nav-link text-light" do %>
-                    <i class="fas fa-home" style="color:white;"></i> 商品一覧
+                    <i class="fa fa-birthday-cake" style="color:white;"></i> 商品一覧
                   <% end %>
                 </li>
                 <li>
@@ -36,12 +36,12 @@
                 </li>
                 <li>
                   <%= link_to admin_root_path, method: :get, class: "nav-link text-light" do %>
-                  <i class="fas fa-book-open" style="color:white;"></i> 注文履歴一覧
+                  <i class="fa fa-sticky-note" style="color:white;"></i> 注文履歴一覧
                   <% end %>
                 </li>
                 <li>
                   <%= link_to admin_genres_path, method: :get, class: "nav-link text-light" do %>
-                  <i class="fas fa-book-open" style="color:white;"></i> ジャンル一覧
+                  <i class="fa fa-server" style="color:white;"></i> ジャンル一覧
                   <% end %>
                 </li>
                 <li>
@@ -57,12 +57,12 @@
                 </li>
                 <li>
                   <%= link_to public_items_path, method: :get, class: "nav-link text-light" do %>
-                    <i class="fas fa-users" style="color:white;"></i> 商品一覧
+                    <i class="fa fa-birthday-cake" style="color:white;"></i> 商品一覧
                   <% end %>
                 </li>
                 <li>
                   <%= link_to public_cart_items_path, method: :get, class: "nav-link text-light" do %>
-                  <i class="fas fa-book-open" style="color:white;"></i> カート
+                  <i class="fa fa-cart-plus" style="color:white;"></i> カート
                   <% end %>
                 </li>
                 <li>
@@ -73,17 +73,17 @@
               <% else %>
                 <li>
                   <%= link_to about_path, method: :get, class: "nav-link text-light" do %>
-                    <i class="fas fa-home" style="color:white;"></i> About
+                    <i class="fa fa-comment" style="color:white;"></i> About
                   <% end %>
                 </li>
                 <li>
                   <%= link_to public_items_path, method: :get, class: "nav-link text-light" do %>
-                    <i class="fas fa-users" style="color:white;"></i> 商品一覧
+                    <i class="fa fa-birthday-cake" style="color:white;"></i> 商品一覧
                   <% end %>
                 </li>
                 <li>
                   <%= link_to new_customer_registration_path, method: :get, class: "nav-link text-light" do %>
-                  <i class="fas fa-book-open" style="color:white;"></i> 新規登録
+                  <i class="fa fa-user-plus" style="color:white;"></i> 新規登録
                   <% end %>
                 </li>
                 <li>

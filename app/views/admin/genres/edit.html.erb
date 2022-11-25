@@ -13,10 +13,17 @@
 
   <%= form_with model: @genre, url: admin_genre_path(@genre.id), method: :put do |f| %>
 
-      <div class="form-group">
-        <%= f.label :ジャンル名 %>
-        <%= f.text_area :name, class: "form-control", required: true %>
-
-        <%= f.submit "変更を保存", class: "btn btn-success" %>
-      </div>
+    <table class="col-md-3 offset-md-3">
+      <tr>
+        <td>
+          <%= f.label :ジャンル名 %>
+        </td>
+        <td>
+          <%= f.text_field :name, class: "form-control", required: true %>
+        </td>
+        <td>
+          <%= f.submit "変更を保存", class: "btn btn-success" %>
+        </td>
+      </tr>
+    </table>
   <% end %>

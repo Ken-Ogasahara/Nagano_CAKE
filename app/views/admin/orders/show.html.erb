@@ -1,6 +1,8 @@
-<h1>注文履歴詳細</h1>
+<div class="col-md-5 offset-md-3">
+  <h1>注文履歴詳細</h1>
+</div>
 
-<table>
+<table class="col-md-3 offset-md-3">
   <%= form_with model: @order, url: admin_order_path, method: :patch do |f| %>
     <tbody>
       <tr>
@@ -49,7 +51,7 @@
   <% end %>
 </table>
 
-<table>
+<table class="col-md-3 offset-md-4">
 
   <thead>
     <tr>
@@ -105,7 +107,7 @@
   </tbody>
 </table>
 
-<table>
+<table class="col-md-3 offset-md-7">
   <tr>
     <td>
       <strong>商品合計</strong>

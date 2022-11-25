@@ -1,6 +1,8 @@
-<h1><%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細</h1>
+<div class="col-md-8 offset-md-3">
+  <h1><%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細</h1>
+</div>
 
-<table>
+<table class="col-md-3 offset-md-3">
 
   <tr>
     <td>会員ID</td>
@@ -48,9 +50,9 @@
 
 </table>
 
-<%= link_to "編集する", edit_admin_customer_path(@customer.id), method: :get, class: 'btn btn-sm btn-success' %>
+<%= link_to "編集する", edit_admin_customer_path(@customer.id), method: :get, class: 'btn btn-sm btn-success offset-md-4' %>
 
-<%= link_to "注文履歴一覧を見る", admin_root_path, method: :get, class: 'btn btn-sm btn-success' %>
+<%= link_to "注文履歴一覧を見る", admin_root_path, method: :get, class: 'btn btn-sm btn-primary' %>
 
 
 
